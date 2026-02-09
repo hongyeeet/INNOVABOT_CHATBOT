@@ -1,19 +1,19 @@
 # INNOVABOT – EngagePro RAG Chatbot
 
-INNOVABOT is a security-first RAG chatbot built with Streamlit and GPT-4o-mini that answers questions about EngagePro’s products and related AI concepts using hybrid FAISS+BM25 brochure search and Wikipedia retrieval.[file:3][file:6][file:16]
+INNOVABOT is a security-first RAG chatbot built with Streamlit and GPT-4o-mini that answers questions about EngagePro’s products and related AI concepts using hybrid FAISS+BM25 brochure search and Wikipedia retrieval.
 
 ## Features
 
-- **Security-first guardrails**: Regex-based PII detection for NRIC, credit cards, emails, and phone numbers plus OpenAI Moderation API content safety checks before any LLM or retrieval calls.[file:3][file:10][file:16]
-- **Combined intent & routing classifier**: Single GPT-4o-mini call classifies greeting/statement/question and routes questions to brochure or Wikipedia, using conversation history for context-aware follow-ups.[file:8][file:16]
-- **Hybrid brochure RAG**: Adaptive FAISS + BM25 retrieval over the EngagePro brochure with query-aware fusion weights (keyword-heavy vs conceptual vs mixed) for 82.1% retrieval accuracy in tests.[file:3][file:6][file:16]
-- **Wikipedia RAG**: Dedicated WikiResearcher agent using Wikipedia API to handle general knowledge and technical questions outside the brochure.[file:3][file:14][file:16]
-- **Defensive response generation**: Product completeness validation, confidence scoring, low-confidence wrapping, and hallucination checks to prioritize accurate, well-calibrated answers over fluent but unsupported text.[file:7][file:9][file:13][file:16]
-- **Rich evaluation suite**: `evaluation_final.py` runs 120 test cases across retrieval quality, routing, PII guardrails, hallucination prevention, edge cases, and multi-turn conversations.[file:1][file:3][file:16]
+- **Security-first guardrails**: Regex-based PII detection for NRIC, credit cards, emails, and phone numbers plus OpenAI Moderation API content safety checks before any LLM or retrieval calls
+- **Combined intent & routing classifier**: Single GPT-4o-mini call classifies greeting/statement/question and routes questions to brochure or Wikipedia, using conversation history for context-aware follow-ups.
+- **Hybrid brochure RAG**: Adaptive FAISS + BM25 retrieval over the EngagePro brochure with query-aware fusion weights (keyword-heavy vs conceptual vs mixed) for 82.1% retrieval accuracy in tests.
+- **Wikipedia RAG**: Dedicated WikiResearcher agent using Wikipedia API to handle general knowledge and technical questions outside the brochure.
+- **Defensive response generation**: Product completeness validation, confidence scoring, low-confidence wrapping, and hallucination checks to prioritize accurate, well-calibrated answers over fluent but unsupported text.
+- **Rich evaluation suite**: `evaluation_final.py` runs 120 test cases across retrieval quality, routing, PII guardrails, hallucination prevention, edge cases, and multi-turn conversations.
 
 ## Project Structure
 
-Key files and modules:[file:3]
+Key files and modules:
 
 - `main.py` – Streamlit chat UI, sidebar controls (mode, temperature, show sources, theme), and end-to-end request orchestration.
 - `src/agents.py` – Intent and routing logic (`classify_intent_and_route`, `route_query`, `CompanyExpert`, `WikiResearcher`).
@@ -27,7 +27,7 @@ Key files and modules:[file:3]
 - `scripts/build_brochure_index.py` – One-time script to build FAISS/BM25 indexes from `CompanyBrochure.pdf`.
 - `evaluation_final.py` – Comprehensive evaluation harness and report generator.
 
-See `ProjectStructure.md` and the technical report for a deeper architecture overview.[file:3][file:16]
+See `ProjectStructure.md` and the technical report for a deeper architecture overview.
 
 ## Setup
 
