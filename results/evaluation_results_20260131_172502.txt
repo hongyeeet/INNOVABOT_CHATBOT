@@ -1,0 +1,317 @@
+==========================================================================================
+INNOVABOT CHATBOT - COMPREHENSIVE EVALUATION SUITE
+Assignment 1 Part 2: Testing & Diagnostic Report
+Timestamp: 2026-01-31 17:25:02
+==========================================================================================
+
+ℹ️ INFO: This evaluation focuses on assignment requirements and identifies specific issues
+ℹ️ INFO: with retrieval quality, routing, and content completeness.
+ℹ️ INFO: Results will be saved to: results\evaluation_results_20260131_172502.txt
+
+
+==========================================================================================
+TEST 1: RETRIEVAL QUALITY ANALYSIS
+==========================================================================================
+
+ℹ️ INFO: Diagnosing why CX Transformer isn't retrieved properly
+
+──────────────────────────────────────────────────────────────────────────────────────────
+Category: CX Transformer - Direct
+──────────────────────────────────────────────────────────────────────────────────────────
+
+Q: What is CX Transformer?
+   Retrieved 6 chunks:
+   [1] score=0.666: e CX Transformer  can transform your business.  Contact Information  • Email: in...
+   [2] score=0.661: ersonalization:  • Detects customer sentiment  through advanced NLP techniques. ...
+   [3] score=0.523:                            Official Open  InnovaBot has been embraced by Fortune...
+   Found: {'CX Transformer'} (Coverage: 100%)
+✅ PASS: Retrieved relevant content
+   → Expected ['CX Transformer']
+
+Q: Tell me about CX Transformer features
+   Retrieved 6 chunks:
+   [1] score=0.679: orm that sets new standards  in customer experience  management.       Powered b...
+   [2] score=0.585: ersonalization:  • Detects customer sentiment  through advanced NLP techniques. ...
+   [3] score=0.523: e CX Transformer  can transform your business.  Contact Information  • Email: in...
+   Found: {'automation', 'resolution', '40%'} (Coverage: 100%)
+✅ PASS: Retrieved relevant content
+   → Expected ['automation', 'resolution', '40%']
+
+Q: How does CX Transformer reduce resolution times?
+   Retrieved 6 chunks:
+   [1] score=0.531: ersonalization:  • Detects customer sentiment  through advanced NLP techniques. ...
+   [2] score=0.449: e CX Transformer  can transform your business.  Contact Information  • Email: in...
+   [3] score=0.412: orm that sets new standards  in customer experience  management.       Powered b...
+   Found: {'40%', 'resolution'} (Coverage: 100%)
+✅ PASS: Retrieved relevant content
+   → Expected ['40%', 'resolution']
+
+Q: What are the key benefits of CX Transformer?
+   Retrieved 6 chunks:
+   [1] score=0.531: ersonalization:  • Detects customer sentiment  through advanced NLP techniques. ...
+   [2] score=0.452: e CX Transformer  can transform your business.  Contact Information  • Email: in...
+   [3] score=0.408:                            Official Open  InnovaBot has been embraced by Fortune...
+   Found: {'sentiment', 'omnichannel'} (Coverage: 100%)
+✅ PASS: Retrieved relevant content
+   → Expected ['sentiment', 'omnichannel']
+
+Q: Describe CX Transformer's AI capabilities
+   Retrieved 6 chunks:
+   [1] score=0.762: ersonalization:  • Detects customer sentiment  through advanced NLP techniques. ...
+   [2] score=0.742:                            Official Open  InnovaBot has been embraced by Fortune...
+   [3] score=0.716: orm that sets new standards  in customer experience  management.       Powered b...
+   Found: {'NLP', 'sentiment analysis'} (Coverage: 100%)
+✅ PASS: Retrieved relevant content
+   → Expected ['NLP', 'sentiment analysis']
+
+
+──────────────────────────────────────────────────────────────────────────────────────────
+Category: CX Transformer - Indirect
+──────────────────────────────────────────────────────────────────────────────────────────
+
+Q: Which EngagePro product improves customer service speed?
+   Retrieved 6 chunks:
+   [1] score=0.631: nt. This commitment ensures the company remains at the forefront of technologica...
+   [2] score=0.531: orm that sets new standards  in customer experience  management.       Powered b...
+   [3] score=0.513:  Lab. This specialized team focuses  on creating tools that:  • Boost productivi...
+   Found: {'40%', 'CX Transformer'} (Coverage: 100%)
+✅ PASS: Retrieved relevant content
+   → Expected ['CX Transformer', '40%']
+
+Q: What tool reduces resolution times by 40%?
+   Retrieved 6 chunks:
+   [1] score=0.480: ersonalization:  • Detects customer sentiment  through advanced NLP techniques. ...
+   [2] score=0.403: nt. This commitment ensures the company remains at the forefront of technologica...
+   [3] score=0.342: orm that sets new standards  in customer experience  management.       Powered b...
+   Found: {'CX Transformer', 'resolution'} (Coverage: 100%)
+✅ PASS: Retrieved relevant content
+   → Expected ['CX Transformer', 'resolution']
+
+Q: How can I boost NPS with EngagePro?
+   Retrieved 6 chunks:
+   [1] score=0.688:  Lab. This specialized team focuses  on creating tools that:  • Boost productivi...
+   [2] score=0.606: nt. This commitment ensures the company remains at the forefront of technologica...
+   [3] score=0.483:                       Official Open  ENGAGEPRO:  REVOLUTIONIZING  CUSTOMER ENGAG...
+   Found: {'CX Transformer'} (Coverage: 50%)
+❌ FAIL: Retrieved relevant content
+   → Expected ['CX Transformer', 'NPS']
+
+Q: What's the best EngagePro solution for customer service?
+   Retrieved 6 chunks:
+   [1] score=0.667:  Lab. This specialized team focuses  on creating tools that:  • Boost productivi...
+   [2] score=0.608: nt. This commitment ensures the company remains at the forefront of technologica...
+   [3] score=0.594: ersonalization:  • Detects customer sentiment  through advanced NLP techniques. ...
+   Found: {'CX Transformer'} (Coverage: 100%)
+✅ PASS: Retrieved relevant content
+   → Expected ['CX Transformer']
+
+Q: Which product uses sentiment analysis?
+   Retrieved 6 chunks:
+   [1] score=0.610: orm that sets new standards  in customer experience  management.       Powered b...
+   [2] score=0.370: nt. This commitment ensures the company remains at the forefront of technologica...
+   [3] score=0.328: ersonalization:  • Detects customer sentiment  through advanced NLP techniques. ...
+   Found: {'CX Transformer', 'sentiment'} (Coverage: 100%)
+✅ PASS: Retrieved relevant content
+   → Expected ['CX Transformer', 'sentiment']
+
+
+──────────────────────────────────────────────────────────────────────────────────────────
+Category: InnovaBot - Direct
+──────────────────────────────────────────────────────────────────────────────────────────
+
+Q: What is InnovaBot?
+   Retrieved 6 chunks:
+   [1] score=0.629: ngapore at the International Business Park area, a hub for global enterprises, p...
+   [2] score=0.542:                            Official Open  InnovaBot has been embraced by Fortune...
+   [3] score=0.503:                       Official Open  ENGAGEPRO:  REVOLUTIONIZING  CUSTOMER ENGAG...
+   Found: {'InnovaBot', 'knowledge management'} (Coverage: 100%)
+✅ PASS: Retrieved relevant content
+   → Expected ['InnovaBot', 'knowledge management']
+
+Q: Tell me about InnovaBot's features
+   Retrieved 6 chunks:
+   [1] score=0.680:                       Official Open  ENGAGEPRO:  REVOLUTIONIZING  CUSTOMER ENGAG...
+   [2] score=0.561: ngapore at the International Business Park area, a hub for global enterprises, p...
+   [3] score=0.509: roviding instant, accurate, and  contextually relevant answers to user queries. ...
+   Found: {'NLP', 'multi-channel'} (Coverage: 100%)
+✅ PASS: Retrieved relevant content
+   → Expected ['NLP', 'multi-channel']
+
+Q: How does InnovaBot work with Fortune 500 companies?
+   Retrieved 6 chunks:
+   [1] score=0.778: ngapore at the International Business Park area, a hub for global enterprises, p...
+   [2] score=0.668:                            Official Open  InnovaBot has been embraced by Fortune...
+   [3] score=0.545: roviding instant, accurate, and  contextually relevant answers to user queries. ...
+   Found: {'InnovaBot', 'Fortune 500'} (Coverage: 100%)
+✅ PASS: Retrieved relevant content
+   → Expected ['InnovaBot', 'Fortune 500']
+
+Q: What platforms does InnovaBot support?
+   Retrieved 6 chunks:
+   [1] score=0.751: ngapore at the International Business Park area, a hub for global enterprises, p...
+   [2] score=0.682:                            Official Open  InnovaBot has been embraced by Fortune...
+   [3] score=0.473: roviding instant, accurate, and  contextually relevant answers to user queries. ...
+   Found: {'Microsoft Teams', 'Confluence', 'Slack'} (Coverage: 100%)
+✅ PASS: Retrieved relevant content
+   → Expected ['Slack', 'Microsoft Teams', 'Confluence']
+
+Q: Describe InnovaBot's knowledge base integration
+   Retrieved 6 chunks:
+   [1] score=0.850: roviding instant, accurate, and  contextually relevant answers to user queries. ...
+   [2] score=0.840: ngapore at the International Business Park area, a hub for global enterprises, p...
+   [3] score=0.373: nt. This commitment ensures the company remains at the forefront of technologica...
+   Found: {'SharePoint', 'Confluence'} (Coverage: 100%)
+✅ PASS: Retrieved relevant content
+   → Expected ['SharePoint', 'Confluence']
+
+
+──────────────────────────────────────────────────────────────────────────────────────────
+Category: InnovaBot - Indirect
+──────────────────────────────────────────────────────────────────────────────────────────
+
+Q: Which EngagePro product is used by Fortune 500 companies?
+   Retrieved 6 chunks:
+   [1] score=0.720: nt. This commitment ensures the company remains at the forefront of technologica...
+   [2] score=0.508: eers and industry veterans,  EngagePro leads the way in artificial intelligence ...
+   [3] score=0.505:                            Official Open  InnovaBot has been embraced by Fortune...
+   Found: {'InnovaBot'} (Coverage: 100%)
+✅ PASS: Retrieved relevant content
+   → Expected ['InnovaBot']
+
+Q: What tool breaks down information silos?
+   Retrieved 6 chunks:
+   [1] score=0.616: ngapore at the International Business Park area, a hub for global enterprises, p...
+   [2] score=0.500: ersonalization:  • Detects customer sentiment  through advanced NLP techniques. ...
+   [3] score=0.196: roviding instant, accurate, and  contextually relevant answers to user queries. ...
+   Found: {'silos', 'InnovaBot'} (Coverage: 100%)
+✅ PASS: Retrieved relevant content
+   → Expected ['InnovaBot', 'silos']
+
+Q: How can I integrate EngagePro with Slack?
+   Retrieved 6 chunks:
+   [1] score=0.623:  Lab. This specialized team focuses  on creating tools that:  • Boost productivi...
+   [2] score=0.409: eers and industry veterans,  EngagePro leads the way in artificial intelligence ...
+   [3] score=0.387:                       Official Open  ENGAGEPRO:  REVOLUTIONIZING  CUSTOMER ENGAG...
+   Found: set() (Coverage: 0%)
+❌ FAIL: Retrieved relevant content
+   → Expected ['InnovaBot', 'Slack']
+
+Q: Which product provides 24/7 support?
+   Retrieved 6 chunks:
+   [1] score=0.519: roviding instant, accurate, and  contextually relevant answers to user queries. ...
+   [2] score=0.349: orm that sets new standards  in customer experience  management.       Powered b...
+   [3] score=0.335: nt. This commitment ensures the company remains at the forefront of technologica...
+   Found: {'InnovaBot', 'multi-channel'} (Coverage: 100%)
+✅ PASS: Retrieved relevant content
+   → Expected ['InnovaBot', 'multi-channel']
+
+
+──────────────────────────────────────────────────────────────────────────────────────────
+Category: AI Engagement Lab
+──────────────────────────────────────────────────────────────────────────────────────────
+
+Q: What is the AI Engagement Lab?
+   Retrieved 6 chunks:
+   [1] score=0.775: es. EngagePro’s AI solutions leverage advanced technologies, such as natural lan...
+   [2] score=0.774:                       Official Open  ENGAGEPRO:  REVOLUTIONIZING  CUSTOMER ENGAG...
+   [3] score=0.713:                            Official Open  InnovaBot has been embraced by Fortune...
+   Found: {'productivity'} (Coverage: 50%)
+❌ FAIL: Retrieved relevant content
+   → Expected ['AI Engagement Lab', 'productivity']
+
+Q: What does EngagePro's AI Engagement Lab focus on?
+   Retrieved 6 chunks:
+   [1] score=0.829: nt. This commitment ensures the company remains at the forefront of technologica...
+   [2] score=0.748: s, enhance customer  experiences, and unlock new possibilities for growth.    Ou...
+   [3] score=0.451:                       Official Open  ENGAGEPRO:  REVOLUTIONIZING  CUSTOMER ENGAG...
+   Found: {'customer service'} (Coverage: 50%)
+❌ FAIL: Retrieved relevant content
+   → Expected ['customer service', 'automation']
+
+Q: How does AI Engagement Lab reduce workloads?
+   Retrieved 6 chunks:
+   [1] score=0.780: nt. This commitment ensures the company remains at the forefront of technologica...
+   [2] score=0.765:  Lab. This specialized team focuses  on creating tools that:  • Boost productivi...
+   [3] score=0.406:                       Official Open  ENGAGEPRO:  REVOLUTIONIZING  CUSTOMER ENGAG...
+   Found: {'workflows'} (Coverage: 50%)
+❌ FAIL: Retrieved relevant content
+   → Expected ['automation', 'workflows']
+
+Q: Tell me about EngagePro's current initiatives
+   Retrieved 6 chunks:
+   [1] score=0.762:                       Official Open  ENGAGEPRO:  REVOLUTIONIZING  CUSTOMER ENGAG...
+   [2] score=0.751: nt. This commitment ensures the company remains at the forefront of technologica...
+   [3] score=0.331:  Lab. This specialized team focuses  on creating tools that:  • Boost productivi...
+   Found: {'AI Engagement Lab'} (Coverage: 100%)
+✅ PASS: Retrieved relevant content
+   → Expected ['AI Engagement Lab']
+
+
+──────────────────────────────────────────────────────────────────────────────────────────
+Category: Company Information
+──────────────────────────────────────────────────────────────────────────────────────────
+
+Q: What is EngagePro's mission?
+   Retrieved 6 chunks:
+   [1] score=0.624:                       Official Open  ENGAGEPRO:  REVOLUTIONIZING  CUSTOMER ENGAG...
+   [2] score=0.593: es. EngagePro’s AI solutions leverage advanced technologies, such as natural lan...
+   [3] score=0.572:  Lab. This specialized team focuses  on creating tools that:  • Boost productivi...
+   Found: {'empower', 'mission'} (Coverage: 100%)
+✅ PASS: Retrieved relevant content
+   → Expected ['mission', 'empower']
+
+Q: Where is EngagePro located?
+   Retrieved 6 chunks:
+   [1] score=0.598:                       Official Open  ENGAGEPRO:  REVOLUTIONIZING  CUSTOMER ENGAG...
+   [2] score=0.416:  Lab. This specialized team focuses  on creating tools that:  • Boost productivi...
+   [3] score=0.381: e CX Transformer  can transform your business.  Contact Information  • Email: in...
+   Found: {'Singapore', 'International Business Park'} (Coverage: 100%)
+✅ PASS: Retrieved relevant content
+   → Expected ['International Business Park', 'Singapore']
+
+Q: How many employees does EngagePro have?
+   Retrieved 6 chunks:
+   [1] score=0.566:  Lab. This specialized team focuses  on creating tools that:  • Boost productivi...
+   [2] score=0.545: eers and industry veterans,  EngagePro leads the way in artificial intelligence ...
+   [3] score=0.531: s, enhance customer  experiences, and unlock new possibilities for growth.    Ou...
+   Found: {'500 professionals'} (Coverage: 100%)
+✅ PASS: Retrieved relevant content
+   → Expected ['500 professionals']
+
+Q: What was EngagePro's revenue last year?
+   Retrieved 6 chunks:
+   [1] score=0.735: eers and industry veterans,  EngagePro leads the way in artificial intelligence ...
+   [2] score=0.280:  Lab. This specialized team focuses  on creating tools that:  • Boost productivi...
+   [3] score=0.241: es. EngagePro’s AI solutions leverage advanced technologies, such as natural lan...
+   Found: {'$50 million', '25% increase'} (Coverage: 100%)
+✅ PASS: Retrieved relevant content
+   → Expected ['$50 million', '25% increase']
+
+Q: What are EngagePro's core values?
+   Retrieved 6 chunks:
+   [1] score=0.702: es. EngagePro’s AI solutions leverage advanced technologies, such as natural lan...
+   [2] score=0.568: eers and industry veterans,  EngagePro leads the way in artificial intelligence ...
+   [3] score=0.521: nt. This commitment ensures the company remains at the forefront of technologica...
+   Found: {'Customer-Centric', 'Innovation', 'Scalable'} (Coverage: 100%)
+✅ PASS: Retrieved relevant content
+   → Expected ['Innovation', 'Customer-Centric', 'Scalable']
+
+
+──────────────────────────────────────────────────────────────────────────────────────────
+RETRIEVAL QUALITY SUMMARY
+──────────────────────────────────────────────────────────────────────────────────────────
+
+Overall Retrieval Success: 23/28 (82.1%)
+⚠️ WARNING: Problem categories: AI Engagement Lab
+
+==========================================================================================
+TEST 2: CONTENT ACCURACY
+==========================================================================================
+
+ℹ️ INFO: Verifying all EngagePro products and services are mentioned
+
+──────────────────────────────────────────────────────────────────────────────────────────
+Service Identification
+──────────────────────────────────────────────────────────────────────────────────────────
+
+Q: What services does EngagePro offer?
